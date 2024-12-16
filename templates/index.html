@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Carros</title>
+</head>
+<body>
+    <h1>Crear un nuevo carro</h1>
+    <form action="/cars" method="post">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" required><br><br>
+        <label for="brand">Marca:</label>
+        <input type="text" id="brand" name="brand" required><br><br>
+        <label for="model">Modelo:</label>
+        <input type="number" id="model" name="model" required><br><br>
+        <button type="submit">Crear Carro</button>
+    </form>
+
+    {% if message %}
+    <p style="color: green;">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
